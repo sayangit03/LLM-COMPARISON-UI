@@ -5,19 +5,19 @@ function App() {
   const [sharedPrompt, setSharedPrompt] = useState('');
   const [responses, setResponses] = useState({
     ollama: '',
-    anthropic: '',
-    openai: ''
+    qwen: '',
+    tinyllama: ''
   });
   const [loading, setLoading] = useState({
     ollama: false,
-    anthropic: false,
-    openai: false
+    qwen: false,
+    tinyllama: false
   });
   const [responseOrder, setResponseOrder] = useState([]);
 
   const models = [
-    { id: 'openai', name: 'Ollama(tinyllama:1.1b)', color: '#2f139e' },
-    { id: 'anthropic', name: 'Ollama (qwen2.5:0.5b)', color: '#2f139e' },
+    { id: 'tinyllama', name: 'Ollama(tinyllama:1.1b)', color: '#2f139e' },
+    { id: 'qwen', name: 'Ollama (qwen2.5:0.5b)', color: '#2f139e' },
     { id: 'ollama', name: 'Ollama (gemma 3:1b)', color: '#2f139e' }
   ];
 
@@ -47,15 +47,15 @@ function App() {
     // Set all models to loading
     setLoading({
       ollama: true,
-      anthropic: true,
-      openai: true
+      qwen: true,
+      tinyllama: true
     });
     
     // Initialize all responses as loading
     setResponses({
       ollama: 'Loading...',
-      anthropic: 'Loading...',
-      openai: 'Loading...'
+      qwen: 'Loading...',
+      tinyllama: 'Loading...'
     });
     
     // Process each model independently
