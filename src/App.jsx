@@ -69,7 +69,7 @@ function App() {
           }));
           
           // Add this model to the response order
-          setResponseOrder(prev => [...prev, model.id]);
+          //setResponseOrder(prev => [...prev, model.id]);
           
           // Set this model's loading state to false
           setLoading(prev => ({
